@@ -11,3 +11,5 @@
 .kpi-grid strong{display:block;color:var(--amber2);font-size:24px}
 .kpi-grid span{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
 @media(max-width:850px){.kpi-grid{grid-template-columns:1fr 1fr}.hero-card:before{border-left:4px solid var(--amber)}}
+
+button.btn{cursor:pointer;font-family:inherit}
