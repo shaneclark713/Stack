@@ -153,7 +153,7 @@
       </div>
 
       <form class="contact" action="https://formspree.io/f/mwvjjbkv" method="POST">
-        <p class="eyebrow">Pitch Deck Request</p>
+        <p class="eyebrow">Investor Materials Request</p>
         <input type="text" name="name" placeholder="Name" required>
         <input type="text" name="organization" placeholder="Organization">
         <input type="email" name="email" placeholder="Email" required>
@@ -167,8 +167,9 @@
         </select>
         <textarea name="message" placeholder="Message"></textarea>
         <input type="hidden" name="_subject" value="STACK Investor Materials Request">
+        <input type="hidden" name="requested_materials" value="Investor deck and investor binder requested; manual review required">
         <button class="btn primary form-button" type="submit">Submit Investor Inquiry</button>
-        <p class="notice">This form is connected through Formspree. Investor deck and investor binder access are provided after inquiry review.</p>
+        <p class="notice">This form sends an inquiry notification only. Investor deck and investor binder access are manually reviewed and sent only after approval.</p>
       </form>
     </section>
   </main>
