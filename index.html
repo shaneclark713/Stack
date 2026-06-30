@@ -64,6 +64,25 @@
       </aside>
     </section>
 
+<section class="section countdown-section">
+  <p class="eyebrow">Index Go-Live Countdown</p>
+  <h2>Daily countdown to July 31, 2026.</h2>
+  <div class="countdown-panel">
+    <div class="countdown-title">
+      <h3>STACK Index Go-Live</h3>
+      <div class="countdown-date">July 31, 2026</div>
+    </div>
+    <div class="countdown-grid" aria-label="Countdown to July 31, 2026">
+      <div><strong id="cd-days">--</strong><span>Days</span></div>
+      <div><strong id="cd-hours">--</strong><span>Hours</span></div>
+      <div><strong id="cd-minutes">--</strong><span>Minutes</span></div>
+      <div><strong id="cd-seconds">--</strong><span>Seconds</span></div>
+    </div>
+    <p class="performance-note">Countdown reflects the planned STACK Index go-live date. ETF launch execution remains subject to seed capital, service-provider onboarding, regulatory process, and final launch dependencies.</p>
+  </div>
+</section>
+
+
     <section id="thesis" class="section">
       <p class="eyebrow">Investment Thesis</p>
       <h2>Built around the infrastructure layer powering AI compute.</h2>
@@ -220,28 +239,31 @@
 </div>
 </section>
 
-<section class="section">
+
+<section id="roadmap" class="section">
 <p class="eyebrow">ETF Launch Roadmap</p>
-<h2>From Concept to Launch</h2>
+<h2>Progression roadmap to index go-live.</h2>
 
 <div class="timeline">
-<div><b>✓ COMPLETE</b><h3>Research & Architecture</h3></div>
-<div><b>✓ COMPLETE</b><h3>Methodology Development</h3></div>
-<div><b>✓ COMPLETE</b><h3>Governance Framework</h3></div>
-<div><b>✓ COMPLETE</b><h3>Data Room Assembly</h3></div>
-<div><b>✓ COMPLETE</b><h3>Historical Simulation</h3></div>
-<div><b>✓ COMPLETE</b><h3>Live Tracking</h3></div>
-<div><b>✓ COMPLETE</b><h3>Website & Investor Portal</h3></div>
-<div><b>✓ COMPLETE</b><h3>Investor Materials</h3></div>
-<div><b>IN PROGRESS</b><h3>Index Provider Engagement</h3></div>
-<div><b>CURRENT</b><h3>Seed Capital Raise</h3></div>
-<div><b>UPCOMING</b><h3>ETF Launch Execution</h3></div>
+<div><span class="roadmap-status">Complete</span><h3>1. Research & Architecture</h3><p>Semiconductor infrastructure thesis, universe design, and bottleneck category framing completed.</p></div>
+<div><span class="roadmap-status">Complete</span><h3>2. Methodology Development</h3><p>Selection logic, tier framework, liquidity controls, replacement universe, and review standards completed.</p></div>
+<div><span class="roadmap-status">Complete</span><h3>3. Governance & Operations</h3><p>Governance framework, maintenance procedures, corporate actions, and review process completed.</p></div>
+<div><span class="roadmap-status">Complete</span><h3>4. Data Room Assembly</h3><p>Executive summary, investor materials, diligence documents, source evidence, and supporting binders assembled.</p></div>
+<div><span class="roadmap-status">Complete</span><h3>5. Website & Investor Portal</h3><p>Public domain, analytics, Executive Summary download, and gated investor inquiry process launched.</p></div>
+<div><span class="roadmap-status">Active</span><h3>6. Live Performance Tracking</h3><p>STACK model basket is being tracked against SMH and SOXX with ongoing dashboard updates.</p></div>
+<div class="current"><span class="roadmap-status">Current</span><h3>7. Index Provider Engagement</h3><p>Index provider engagement is active as STACK moves toward the July 31, 2026 index go-live milestone.</p></div>
+<div class="current"><span class="roadmap-status">Current</span><h3>8. Seed Capital Raise</h3><p>Current focus: investor outreach, qualified inquiry review, and seed-capital discussions.</p></div>
+<div class="current"><span class="roadmap-status">Go-Live Target</span><h3>9. STACK Index Goes Live — July 31, 2026</h3><p>The STACK Index is targeted to go live on July 31, 2026 as the next major milestone in the launch sequence.</p></div>
+<div class="upcoming"><span class="roadmap-status">Upcoming</span><h3>10. Service Provider Finalization</h3><p>Finalize ETF platform, fund operations, legal, compliance, and launch execution partners.</p></div>
+<div class="upcoming"><span class="roadmap-status">Upcoming</span><h3>11. ETF Filing & Launch Execution</h3><p>Move through final ETF launch workflow after the index go-live milestone and required dependencies.</p></div>
 </div>
 </section>
 
-<section class="section">
+
+
+<section id="derisking" class="section">
 <p class="eyebrow">De‑Risking Progress</p>
-<h2>Institutional Readiness</h2>
+<h2>Institutional readiness and index go-live progress.</h2>
 
 <div class="cards three">
 <article><h3>Methodology</h3><p>Complete</p></article>
@@ -250,11 +272,15 @@
 <article><h3>Watchlist</h3><p>Complete</p></article>
 <article><h3>Historical Simulation</h3><p>Complete</p></article>
 <article><h3>Live Tracking</h3><p>Active</p></article>
-<article><h3>Website</h3><p>Live</p></article>
-<article><h3>Investor Materials</h3><p>Complete</p></article>
+<article><h3>Website & Investor Portal</h3><p>Live</p></article>
+<article><h3>Investor Materials</h3><p>Complete and gated by inquiry review</p></article>
 <article><h3>Legal Entity</h3><p>Formed</p></article>
+<article><h3>Index Provider Engagement</h3><p>Active</p></article>
+<article><h3>Index Go-Live</h3><p>Targeted for July 31, 2026</p></article>
+<article><h3>ETF Launch Execution</h3><p>Upcoming after index go-live and required launch dependencies</p></article>
 </div>
 </section>
+
 
 <section id="investors" class="section investor">
       <div>
@@ -390,6 +416,34 @@ function drawPerformanceChart() {
 }
 window.addEventListener('load', drawPerformanceChart);
 window.addEventListener('resize', drawPerformanceChart);
+</script>
+
+
+<script>
+(function(){
+  const target = new Date('2026-07-31T23:59:59-07:00').getTime();
+  function updateCountdown(){
+    const now = Date.now();
+    let distance = Math.max(0, target - now);
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    distance -= days * 1000 * 60 * 60 * 24;
+    const hours = Math.floor(distance / (1000 * 60 * 60));
+    distance -= hours * 1000 * 60 * 60;
+    const minutes = Math.floor(distance / (1000 * 60));
+    distance -= minutes * 1000 * 60;
+    const seconds = Math.floor(distance / 1000);
+    const set = (id, value) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = String(value).padStart(2, '0');
+    };
+    set('cd-days', days);
+    set('cd-hours', hours);
+    set('cd-minutes', minutes);
+    set('cd-seconds', seconds);
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+})();
 </script>
 
 </body>
